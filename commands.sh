@@ -1,0 +1,1 @@
+ansible-playbook basic.yml --extra-vars "ansible_sudo_pass=root"
