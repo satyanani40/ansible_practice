@@ -46,6 +46,21 @@ using root user, we need to create a new user and need to add to sudoers.
     we will use sudo
     # we can pass password from command line like --extra-vars "ansible_sudo_pass=***" 
     
+    Note:
+    
+    # root user: To understand more clear sudo and root users are different both are not same.
+    Ex: if we have large company we have mulplte persons who have root access to do 
+    administrative tasks, if somebody leaving company , then he may change root user password.
+    all other users can't access, because root user is password is changed. one more thing
+    if any body loggedin using root user, what they are doing not logged in log file.
+    only loggin and logout times and username is logged.
+    
+    # sudo user: if we add persons to sudo group,they can do specific administrative tasks
+    everybody will use their own password.
+    every action done by sudo group will be logged.
+    sudo services can be managed by LDAP servers and ansible.
       
+# TODO: follow this artical and do use full things.
+https://medium.com/datadriveninvestor/devops-using-ansible-to-provision-aws-ec2-instances-3d70a1cb155f      
    
 
